@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
-import { ColorBar, AddModalWrapper, ColorCubeRow, ColorCube, Input, TextArea, ButtonWrapper, Button } from './styles'
+import { ColorBar, AddModalWrapper, ColorCube, Input, TextArea, ButtonWrapper, Button } from './styles'
 import { closeModal } from '../../../../actions/modals'
 import * as colors from '../../../../../style/colors'
+import { addNote } from '../../../../actions/notes'
 
 class AddNoteModal extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ class AddNoteModal extends Component {
     const selectedColor = this.state.color
 
     return (
-      <ColorCubeRow>
+      <div style={{display: 'flex'}}>
         <ColorCube
           selected={selectedColor === colors.SELECTABLE_RED}
           color={colors.SELECTABLE_RED}
@@ -38,13 +39,21 @@ class AddNoteModal extends Component {
           selected={selectedColor === colors.SELECTABLE_BLUE}
           color={colors.SELECTABLE_BLUE}
           onClick={() => this.setState({color: colors.SELECTABLE_BLUE})}/>
-      </ColorCubeRow>
+      </div>
     )
   }
 
   handleSubmit(e) {
     e.preventDefault()
-    console.log(this.state)
+    const { addNote, closeModal } = this.props
+    const { title, body, color } = this.state
+
+    addNote({
+      title,
+      body,
+      color
+    })
+    closeModal()
   }
 
   render () {
@@ -85,12 +94,8 @@ class AddNoteModal extends Component {
 }
 
 AddNoteModal.propTypes = {
-  closeModal: PropTypes.func
+  closeModal: PropTypes.func,
+  addNote: PropTypes.func
 }
 
-function mapStateToProps (state) {
-  return {
-  }
-}
-
-export default connect(mapStateToProps, {closeModal})(AddNoteModal)
+export default connect(null, {addNote, closeModal})(AddNoteModal)

@@ -17,9 +17,6 @@ export const AddModalWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `
-export const ColorCubeRow = styled.div`
-  display: flex;  
-`
 
 export const ColorCube = styled.div`
   width: 30px;
