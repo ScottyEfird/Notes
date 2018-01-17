@@ -6,45 +6,45 @@ import * as colors from '../../style/colors'
 const preloadedNotes = [
   {
     id: 1,
-    title: 'Title',
-    body: 'words and stuff',
+    title: 'Buy more stuff',
+    body: 'Milk, cheese, bread',
     color: colors.SELECTABLE_BLUE
   },
   {
     id: 2,
-    title: 'Yellow!',
-    body: 'Html?!!!!',
-    color: colors.SELECTABLE_YELLOW
+    title: 'Check bitcoin losses',
+    body: 'Hint, it is a lot... 🔥',
+    color: colors.SELECTABLE_RED
   },
   {
     id: 3,
-    title: 'Title',
-    body: 'words and stuff',
-    color: colors.SELECTABLE_BLUE
+    title: 'Lunch plans',
+    body: 'Five Guys, Burger King or MickyDs? (There is a clear choice)',
+    color: colors.SELECTABLE_GREEN
   },
   {
     id: 4,
-    title: 'Yellow!',
-    body: 'Html?!!!!',
+    title: 'Card Title!',
+    body: 'Isnt React neat? Redux too!',
     color: colors.SELECTABLE_YELLOW
   },
   {
     id: 5,
-    title: 'Title',
+    title: 'More text here',
     body: 'words and stuff',
     color: colors.SELECTABLE_BLUE
   },
   {
     id: 6,
-    title: 'Yellow!',
-    body: 'Html?!!!!',
+    title: 'Stuff',
+    body: 'Body',
     color: colors.SELECTABLE_YELLOW
   },
   {
     id: 7,
-    title: 'Yellow!',
-    body: 'Html?!!!!',
-    color: colors.SELECTABLE_YELLOW
+    title: 'More text!',
+    body: '...',
+    color: colors.SELECTABLE_GREEN
   }
 ]
 //
