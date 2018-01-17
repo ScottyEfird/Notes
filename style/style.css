@@ -1,1 +1,5 @@
 /* 8px for css base */
+
+.pt-dialog {
+  width: 840px !important;
+}

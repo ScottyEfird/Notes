@@ -1,14 +1,22 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import AddNoteModal from './Modals/AddNoteModal'
 import { connect } from 'react-redux'
-import { modalStateSelector } from '../../selector'
+import { modalStateSelector, modalTypeSelector } from '../../selector'
 import { closeModal } from '../../actions/modals'
 import { Dialog } from "@blueprintjs/core"
+import modalTypes from  '../../utils'
 
 class DisplayModals extends Component {
+  renderModalContent(modalType) {
+    switch(modalType) {
+    case modalTypes.ADD_NOTE_MODAL:
+      return <AddNoteModal />
+    }
+  }
+
   render () {
-    const { closeModal, modalState } = this.props
-    
+    const { closeModal, modalState, modalType } = this.props
     return (
       <Dialog
         isOpen={modalState}
@@ -16,8 +24,8 @@ class DisplayModals extends Component {
         canEscapeKeyClose={true}
       >
         <div className='pt-dialog-body'>
-          Some content
-        </div>       
+          {this.renderModalContent(modalType)}
+        </div>
       </Dialog>
     )
   }
@@ -25,14 +33,16 @@ class DisplayModals extends Component {
 
 DisplayModals.propTypes = {
   closeModal: PropTypes.func,
-  modalState: PropTypes.bool
+  modalState: PropTypes.bool,
+  modalType: PropTypes.string
 }
 
 function mapStateToProps (state) {
   const modalState = modalStateSelector(state)
-  
+  const modalType = modalTypeSelector(state)
   return {
-    modalState
+    modalState,
+    modalType
   }
 }
 
