@@ -4,7 +4,7 @@ import * as colors from '../../../../../style/colors'
 export const ColorBar = styled.div`
   width: 840px;
   height: 15px;
-  border-radius: 10px 10px 10px 0px;
+  border-radius: 10px 10px 0px 0px;
   position: absolute;
   margin-top: -20px;
   margin-left: -20px;
