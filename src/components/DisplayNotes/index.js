@@ -19,7 +19,7 @@ class DisplayNotes extends Component {
               {note.title}
             </Title>
             <div>
-              <TitleButton className='pt-icon-edit' />
+              <TitleButton className='pt-icon-edit'  onClick={() => openModal(modalTypes.EDIT_NOTE_MODAL, {note})} />
               <TitleButton className='pt-icon-trash' onClick={() => openModal(modalTypes.DELETE_NOTE_MODAL, {noteId: note.id})} />
             </div>
           </TitleBar>

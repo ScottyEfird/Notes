@@ -11,9 +11,11 @@ import { modalTypes, modalSize } from  '../../utils'
 class DisplayModals extends Component {
   renderModalContent() {
     const { modalPayload, modalType } = this.props
+
     switch(modalType) {
     case modalTypes.ADD_NOTE_MODAL:
-      return <AddNoteModal modalPayload={modalPayload} />
+    case modalTypes.EDIT_NOTE_MODAL:
+      return <AddNoteModal editNote={modalPayload} />
     case modalTypes.DELETE_NOTE_MODAL:
       return <DeleteNoteModal modalPayload={modalPayload} />
     }

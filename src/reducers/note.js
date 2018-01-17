@@ -72,8 +72,22 @@ const noteReducers = (state = initialState, action) => {
   }
   case actions.DELETE_NOTE: {
     let notes = state.notes
-    for (var index in notes) {
+    for (let index in notes) {
       notes[index].id === action.payload && notes.splice(index, 1)
+    }
+
+    return Object.assign({}, state, {notes})
+  }
+  case actions.EDIT_NOTE: {
+    const { title, color, body, id } = action.payload
+    let notes = state.notes
+
+    for (let index in notes) {
+      if(notes[index].id === id) {
+        notes[index].body = body
+        notes[index].title = title
+        notes[index].color = color
+      }
     }
 
     return Object.assign({}, state, {notes})
