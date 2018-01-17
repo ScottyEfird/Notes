@@ -76,15 +76,21 @@ class AddNoteModal extends Component {
           />
 
           <ButtonWrapper>
-            <Button color={colors.GRAY} onClick={(e) => {
-              e.preventDefault()
-              closeModal()
-            }}> Cancel
+            <Button
+              color={colors.GRAY}
+              onClick={(e) => {
+                e.preventDefault()
+                closeModal()
+              }}>
+              Cancel
             </Button>
-            <Button color={this.state.title === '' ? colors.LIGHT_CYAN : colors.CYAN} onClick={(e) => {
-              e.preventDefault()
-              this.handleSubmit(e)
-            }}> Add
+            <Button
+              color={this.state.title === '' ? colors.LIGHT_CYAN : colors.CYAN}
+              onClick={(e) => {
+                e.preventDefault()
+                this.handleSubmit(e)
+              }}>
+              Add
             </Button>
           </ButtonWrapper>
         </form>

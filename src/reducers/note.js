@@ -2,7 +2,7 @@ import * as actions from '../actions/notes'
 import { createUuid } from '../utils'
 import * as colors from '../../style/colors'
 
-// Pretend there is a magic API call here to fetch some notes 🚀
+// Pretend there is a magic API call here to GET some notes 🚀
 const preloadedNotes = [
   {
     id: 1,
@@ -48,6 +48,7 @@ const preloadedNotes = [
   }
 ]
 //
+
 const initialState = {
   notes: preloadedNotes
 }
@@ -66,6 +67,14 @@ const noteReducers = (state = initialState, action) => {
 
     const notes = state.notes
     notes.push(newNote)
+
+    return Object.assign({}, state, {notes})
+  }
+  case actions.DELETE_NOTE: {
+    let notes = state.notes
+    for (var index in notes) {
+      notes[index].id === action.payload && notes.splice(index, 1)
+    }
 
     return Object.assign({}, state, {notes})
   }

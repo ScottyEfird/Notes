@@ -1,6 +1,16 @@
 // Modal Types
-export default {
-  ADD_NOTE_MODAL:  'ADD_NOTE_MODAL'
+export const modalTypes = {
+  ADD_NOTE_MODAL:  'ADD_NOTE_MODAL',
+  DELETE_NOTE_MODAL: 'DELETE_NOTE_MODAL'
+}
+
+export function modalSize (type) {
+  switch(type) {
+  case modalTypes.ADD_NOTE_MODAL:
+    return 840
+  case modalTypes.DELETE_NOTE_MODAL:
+    return 600
+  }
 }
 
 //RFC4122

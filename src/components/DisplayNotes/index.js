@@ -2,11 +2,13 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { notesSelector, modalStateSelector } from '../../selector'
-import { NoteGrid, CardBody, TextBody, CardColorBar, TitleBar, Title, Hr } from './styles'
+import { NoteGrid, CardBody, TitleButton, TextBody, CardColorBar, TitleBar, Title, Hr } from './styles'
+import { openModal } from '../../actions/modals'
+import { modalTypes } from  '../../utils'
 
 class DisplayNotes extends Component {
   renderNoteCards () {
-    const { notes } = this.props
+    const { notes, openModal } = this.props
 
     return notes.map((note) => {
       return (
@@ -17,8 +19,8 @@ class DisplayNotes extends Component {
               {note.title}
             </Title>
             <div>
-              <span className='pt-icon-edit' style={{marginRight: 10}}/>
-              <span className='pt-icon-trash' style={{marginLeft: 10}}/>
+              <TitleButton className='pt-icon-edit' />
+              <TitleButton className='pt-icon-trash' onClick={() => openModal(modalTypes.DELETE_NOTE_MODAL, {noteId: note.id})} />
             </div>
           </TitleBar>
           <Hr />
@@ -41,6 +43,7 @@ class DisplayNotes extends Component {
 
 DisplayNotes.propTypes = {
   notes: PropTypes.array,
+  openModal: PropTypes.func,
   modalState: PropTypes.bool,
 }
 
@@ -54,4 +57,4 @@ function mapStateToProps (state) {
   }
 }
 
-export default connect(mapStateToProps)(DisplayNotes)
+export default connect(mapStateToProps, {openModal})(DisplayNotes)

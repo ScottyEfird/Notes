@@ -3,6 +3,7 @@ export const BLUE_GRAY = '#2C323E'
 
 // Button colors
 export const GRAY = '#D2D3D4'
+export const HOVER_CYAN = '#66C4CC'
 export const LIGHT_CYAN = '#B0DFE3'
 export const CYAN = '#5FB4BC'
 export const DARK_CYAN = '#55a2a9'

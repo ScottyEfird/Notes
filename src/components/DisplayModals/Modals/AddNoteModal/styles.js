@@ -12,7 +12,7 @@ export const ColorBar = styled.div`
 `
 
 export const AddModalWrapper = styled.div`
-  width: 840px;
+  width: 840px !important;
   height: 770px;
   display: flex;
   flex-direction: column;
