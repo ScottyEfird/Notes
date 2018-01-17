@@ -1,1 +1,1 @@
-// TODO
+export const modalStateSelector = state => state.modal.modalState

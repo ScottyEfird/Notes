@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
 import NavBar from '../NavBar'
+import DisplayModals from '../DisplayModals'
+import { MainDisplayWrapper } from './styles'
 
 class MainDisplay extends Component {
   render () {
     return (
-      <div>
+      <MainDisplayWrapper>
         <NavBar />
-        Hello!
-      </div>
+        <DisplayModals />
+      </MainDisplayWrapper>
     )
   }
 }
@@ -17,9 +17,4 @@ class MainDisplay extends Component {
 MainDisplay.propTypes = {
 }
 
-function mapStateToProps (state, ownProps) {
-  return {
-  }
-}
-
-export default connect(mapStateToProps)(MainDisplay)
+export default MainDisplay

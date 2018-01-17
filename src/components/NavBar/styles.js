@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import * as colros from '../../../style/colors'
+import * as colors from '../../../style/colors'
 
 export const NavBarWrapper = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ export const NavBarWrapper = styled.div`
   align-items: stretch;
   align-content: stretch;
   height: 110px;
-  background-color: ${colros.DARK_BLUE_GRAY};
+  background-color: ${colors.DARK_BLUE_GRAY};
 `
 
 export const WeirdBlackBoxThing = styled.div`
@@ -17,7 +17,7 @@ export const WeirdBlackBoxThing = styled.div`
   width: 250px;
   margin-left: 100px;
   margin-top: 25px;
-  background-color: ${colros.BLUE_GRAY};
+  background-color: ${colors.BLUE_GRAY};
 `
 
 export const ButtonWrapper = styled.div`
@@ -28,7 +28,7 @@ export const ButtonWrapper = styled.div`
 export const Button = styled.button`
   height: 60px;
   width: 250px;
-  background-color: ${colros.CYAN};
+  background-color: ${colors.CYAN};
   color: white;
   border-radius: 4px;
   border: none;
@@ -37,6 +37,6 @@ export const Button = styled.button`
   font-weight: 100;
 
   :hover {
-    background-color: ${colros.DARK_CYAN};
+    background-color: ${colors.DARK_CYAN};
   }
 `

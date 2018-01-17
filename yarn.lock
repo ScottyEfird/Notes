@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@blueprintjs/core@^1.35.0":
+"@blueprintjs/core@^1.35.1":
   version "1.35.1"
   resolved "https://registry.yarnpkg.com/@blueprintjs/core/-/core-1.35.1.tgz#f81daf8c6e5d28715bad85d70b949344a6578cd3"
   dependencies:
