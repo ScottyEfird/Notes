@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { notesSelector, modalStateSelector } from '../../selector'
-import { NoteGrid, CardBody, CardColorBar, Title } from './styles'
+import { NoteGrid, CardBody, TextBody, CardColorBar, TitleBar, Title, Hr } from './styles'
 
 class DisplayNotes extends Component {
   renderNoteCards () {
@@ -12,9 +12,19 @@ class DisplayNotes extends Component {
       return (
         <CardBody key={note.id}>
           <CardColorBar color={note.color} />
-          <Title>
-            {note.title}
-          </Title>
+          <TitleBar>
+            <Title>
+              {note.title}
+            </Title>
+            <div>
+              <span className='pt-icon-edit' style={{marginRight: 10}}/>
+              <span className='pt-icon-trash' style={{marginLeft: 10}}/>
+            </div>
+          </TitleBar>
+          <Hr />
+          <TextBody>
+            {note.body}
+          </TextBody>
         </CardBody>
       )
     })

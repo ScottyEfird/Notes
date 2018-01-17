@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { GRAY, BLUE_GRAY } from '../../../style/colors'
 
 export const NoteGrid = styled.div`
   display: flex;
@@ -18,6 +19,12 @@ export const CardBody = styled.div`
   box-shadow: 10px 7px 29px 1px rgba(235,235,235,1);
 `
 
+export const TextBody = styled.div`
+  color: ${GRAY};
+  font-size: 18px;
+  margin: 20px;
+`
+
 export const CardColorBar = styled.div`
 width: 410px;
 height: 10px;
@@ -26,8 +33,21 @@ position: absolute;
 background-color: ${props => props.color};
 `
 
-export const Title = styled.div`
-  background-color: red;
+export const TitleBar = styled.div`
   margin-top: 20px;
+  display: flex;
+  font-size: 26px;
+  color: ${GRAY};
+  justify-content: space-around;
+`
 
+export const Title = styled.div`
+  font-size: 26px;
+  color: ${BLUE_GRAY};
+`
+
+export const Hr = styled.hr`
+  color: ${GRAY};
+  width: 100%; 
+  height: 1px;
 `
