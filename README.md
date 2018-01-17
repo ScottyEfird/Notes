@@ -1,6 +1,6 @@
-### Coding Challange
+# Coding Challange
 
-#Only tested in Chrome. 
+## Only tested in Chrome. 
 
 Things I'd add if I had more time:
 - Jest for unit tests
@@ -16,7 +16,12 @@ Note: Must have Node installed.
 
 
 ## Packages used
-!(React)[https://reactjs.org/]
-!(Redux)[https://redux.js.org/]
-!(Styled Components)[https://www.styled-components.com/]
-!(Blueprint)[http://blueprintjs.com/]
+[React](https://reactjs.org/)
+
+[Redux](https://redux.js.org/)
+
+[Styled Components](https://www.styled-components.com/)
+
+[Blueprint](http://blueprintjs.com/)
+
+For full list, see ```package.json```
