@@ -245,3 +245,5 @@ dataList.RND = {
   Low: getRandom(0, 15),
   Open: getRandom(0, 1234)
 }
+
+export default dataList
