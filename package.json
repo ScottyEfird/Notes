@@ -1,9 +1,9 @@
 {
-  "name": "notes",
+  "name": "IHSMarkitCodingChallenge",
   "version": "1.0.0",
-  "description": "24hr Post It Note Challange",
+  "description": "",
   "main": "index.js",
-  "repository": "https://github.com/ScottEfird/Notes",
+  "repository": "https://github.com/ScottEfird/IHS_Markit_Coding_Challenge",
   "scripts": {
     "dev": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
