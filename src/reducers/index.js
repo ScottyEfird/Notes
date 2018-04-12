@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
-import stocks from './stocks'
+import note from './note'
+import modal from './modal'
 
 const rootReducer = combineReducers({
-  stocks
+  note,
+  modal
 })
 
 export default rootReducer
