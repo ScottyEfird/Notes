@@ -15,6 +15,9 @@ Note: Must have Node installed.
 ```
 
 
+![Example gif](./example.gif)
+
+
 ## Packages used
 [React](https://reactjs.org/)
 
