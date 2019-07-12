@@ -1,12 +1,4 @@
-# Coding Challange
-
-## Only tested in Chrome. 
-
-Things I'd add if I had more time:
-- Jest for unit tests
-- Style Component Library
-- Mobile Components (Ie, return custom components on smaller screen sizes)
-- General CSS clean up
+# 24hr Coding Challange
 
 Note: Must have Node installed. 
 ```
@@ -16,7 +8,6 @@ Note: Must have Node installed.
 
 
 ![Example gif](./example.gif)
-
 
 ## Packages used
 [React](https://reactjs.org/)
