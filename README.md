@@ -1,4 +1,4 @@
-# 24hr Coding Challange
+# 24hr Coding challenge
 
 Note: Must have Node installed. 
 ```
